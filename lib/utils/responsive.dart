@@ -5,7 +5,7 @@ class Responsive {
       MediaQuery.of(context).size.width < 640;
   static bool isTablet(BuildContext context) =>
       MediaQuery.of(context).size.width >= 640 &&
-      MediaQuery.of(context).size.width < 1024;
+      MediaQuery.of(context).size.width < 900;
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1024;
+      MediaQuery.of(context).size.width >= 900;
 }
