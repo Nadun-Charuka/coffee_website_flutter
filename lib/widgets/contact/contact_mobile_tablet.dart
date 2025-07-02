@@ -2,8 +2,8 @@ import 'package:coffee_website/constants/constant.dart';
 import 'package:coffee_website/reuse_widget/title_widget.dart';
 import 'package:flutter/material.dart';
 
-class ContactTabletMobile extends StatelessWidget {
-  const ContactTabletMobile({super.key});
+class ContactMobileTablet extends StatelessWidget {
+  const ContactMobileTablet({super.key});
 
   @override
   Widget build(BuildContext context) {

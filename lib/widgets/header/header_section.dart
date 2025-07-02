@@ -1,6 +1,6 @@
 import 'package:coffee_website/utils/responsive.dart';
 import 'package:coffee_website/widgets/header/header_desktop.dart';
-import 'package:coffee_website/widgets/header/header_tablet_mobile.dart';
+import 'package:coffee_website/widgets/header/header_mobile_tablet.dart';
 import 'package:flutter/material.dart';
 
 class HeaderSection extends StatelessWidget {
@@ -9,6 +9,6 @@ class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDesktop = Responsive.isDesktop(context);
-    return isDesktop ? HeaderDesktop() : HeaderTabletMobile();
+    return isDesktop ? HeaderDesktop() : HeaderMobileTablet();
   }
 }

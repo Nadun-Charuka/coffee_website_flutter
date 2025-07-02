@@ -3,8 +3,8 @@ import 'package:coffee_website/reuse_widget/title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AboutTabletMobile extends StatelessWidget {
-  const AboutTabletMobile({super.key});
+class AboutMobileTablet extends StatelessWidget {
+  const AboutMobileTablet({super.key});
 
   @override
   Widget build(BuildContext context) {

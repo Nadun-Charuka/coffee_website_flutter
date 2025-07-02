@@ -2,8 +2,8 @@ import 'package:coffee_website/constants/constant.dart';
 import 'package:coffee_website/data/navbar_data.dart';
 import 'package:flutter/material.dart';
 
-class HeaderTabletMobile extends StatelessWidget {
-  const HeaderTabletMobile({super.key});
+class HeaderMobileTablet extends StatelessWidget {
+  const HeaderMobileTablet({super.key});
 
   @override
   Widget build(BuildContext context) {

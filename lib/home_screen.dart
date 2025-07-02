@@ -1,9 +1,10 @@
 import 'package:coffee_website/utils/responsive.dart';
 import 'package:coffee_website/widgets/about/about_section.dart';
 import 'package:coffee_website/widgets/contact/contact_section.dart';
+import 'package:coffee_website/widgets/footer/footer_section.dart';
 import 'package:coffee_website/widgets/gallery/gallery_section.dart';
 import 'package:coffee_website/widgets/header/header_section.dart';
-import 'package:coffee_website/widgets/header/header_tablet_mobile.dart';
+import 'package:coffee_website/widgets/header/header_mobile_tablet.dart';
 import 'package:coffee_website/widgets/hero/hero_section.dart';
 import 'package:coffee_website/widgets/menu/menu_section.dart';
 import 'package:coffee_website/widgets/testimonial/testimonial_section.dart';
@@ -27,7 +28,8 @@ class HomeScreen extends StatelessWidget {
             MenuSection(),
             TestimonialSection(),
             GallerySection(),
-            ContactSection()
+            ContactSection(),
+            FooterSection(),
           ],
         ),
       ),
