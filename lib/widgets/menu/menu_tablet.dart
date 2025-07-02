@@ -16,11 +16,11 @@ class MenuTablet extends StatelessWidget {
           TitleWidget(title: "OUR MENU", color: Colors.white),
           GridView.builder(
             physics: NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 400,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10,
-              childAspectRatio: 10 / 13,
+              childAspectRatio: 10 / 11,
             ),
             shrinkWrap: true,
             itemCount: menuList.length,

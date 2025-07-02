@@ -29,7 +29,7 @@ class AboutDesktop extends StatelessWidget {
             SizedBox(width: 40),
             Expanded(
               child: Column(
-                spacing: 50,
+                spacing: 10,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TitleWidget(title: "ABOUT US", color: Colors.black),

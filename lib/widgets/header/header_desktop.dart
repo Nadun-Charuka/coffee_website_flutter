@@ -63,7 +63,7 @@ class _NavBarWidgetState extends State<NavBarWidget> {
     final navLinks = NavbarData.navlink;
     return SizedBox(
       height: 80,
-      width: MediaQuery.of(context).size.width * 0.70,
+      width: MediaQuery.of(context).size.width * 0.75,
       child: ListView.builder(
         physics: NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,

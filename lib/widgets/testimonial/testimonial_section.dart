@@ -64,61 +64,59 @@ class _TestimonialSectionState extends State<TestimonialSection> {
     final width = MediaQuery.of(context).size.width;
     final itemWidth = getItemWidth(width);
 
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .6,
-      child: Column(
-        children: [
-          TitleWidget(title: "TESTIMONIALS", color: darkColor),
-          SizedBox(
-            height: 300,
-            child: ListView.builder(
-              controller: _scrollController,
-              scrollDirection: Axis.horizontal,
-              itemCount: testimonials.length,
-              itemBuilder: (context, index) {
-                final item = testimonials[index];
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: itemWidth,
-                    padding: const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: lightPinkColor,
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundImage: AssetImage(item.imageUrl),
-                        ),
-                        const SizedBox(height: 12),
-                        Text(
-                          item.name,
-                          style: const TextStyle(
-                            color: darkColor,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 18,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          '"${item.feedback}"',
-                          style: const TextStyle(
-                            color: Colors.grey,
-                            fontStyle: FontStyle.italic,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ),
+    return Column(
+      children: [
+        TitleWidget(title: "TESTIMONIALS", color: darkColor),
+        SizedBox(
+          height: 300,
+          child: ListView.builder(
+            shrinkWrap: true,
+            controller: _scrollController,
+            scrollDirection: Axis.horizontal,
+            itemCount: testimonials.length,
+            itemBuilder: (context, index) {
+              final item = testimonials[index];
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: itemWidth,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: lightPinkColor,
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                );
-              },
-            ),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage(item.imageUrl),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        item.name,
+                        style: const TextStyle(
+                          color: darkColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 18,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        '"${item.feedback}"',
+                        style: const TextStyle(
+                          color: Colors.grey,
+                          fontStyle: FontStyle.italic,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

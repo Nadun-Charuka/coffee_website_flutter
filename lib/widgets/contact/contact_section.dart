@@ -1,3 +1,6 @@
+import 'package:coffee_website/utils/responsive.dart';
+import 'package:coffee_website/widgets/contact/contact_desktop.dart';
+import 'package:coffee_website/widgets/contact/contact_tablet_mobile.dart';
 import 'package:flutter/material.dart';
 
 class ContactSection extends StatelessWidget {
@@ -5,8 +8,7 @@ class ContactSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [],
-    );
+    final isDesktop = Responsive.isDesktop(context);
+    return isDesktop ? ContactDesktop() : ContactTabletMobile();
   }
 }

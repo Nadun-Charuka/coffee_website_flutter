@@ -19,38 +19,33 @@ class GalleryDesktop extends StatelessWidget {
     return Container(
       color: whiteColor,
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
       child: Padding(
         padding: EdgeInsets.all(dPadding),
         child: Column(
           children: [
             TitleWidget(title: "GALLERY", color: Colors.black),
-            Expanded(
-              child: SizedBox(
-                child: GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 30,
-                    childAspectRatio: 8 / 5,
-                  ),
-                  itemCount: list.length,
-                  itemBuilder: (context, index) {
-                    final item = list[index];
-                    return SizedBox(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                          item,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    );
-                  },
-                ),
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 30,
+                childAspectRatio: 8 / 5,
               ),
+              itemCount: list.length,
+              itemBuilder: (context, index) {
+                final item = list[index];
+                return SizedBox(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      item,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),

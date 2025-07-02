@@ -9,8 +9,10 @@ class AboutTabletMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(
+        minHeight: MediaQuery.of(context).size.height,
+      ),
       width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
       color: lightPinkColor,
       child: Padding(
         padding: const EdgeInsets.all(mPadding),
